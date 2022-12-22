@@ -27,7 +27,7 @@ return function(bufnr, notif, highlights, config)
 	})
 	api.nvim_buf_set_extmark(bufnr, namespace, 0, 0, {
 		api.nvim_buf_set_option(bufnr, "modifiable", false);
-		virt_text = { { " " }, { right_title, highlights.title }, { " " } },
+		virt_text = { { " panel.nvim " }, { right_title, highlights.title }, { " " } },
 		virt_text_pos = "right_align",
 		priority = 10,
 	})
