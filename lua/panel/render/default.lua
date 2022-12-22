@@ -2,7 +2,7 @@ local api = vim.api
 local base = require("panel.render.base")
 
 return function(bufnr, notif, highlights, config)
-	local left_icon = notif.icon .. " "
+	local left_icon = notif.icon .. " panel.nvim "
 	local max_message_width = math.max(math.max(unpack(vim.tbl_map(function(line)
 		return vim.fn.strchars(line)
 	end, notif.message))))
