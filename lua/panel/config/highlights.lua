@@ -5,12 +5,12 @@ function M.setup()
 	hi default link PanelBackground Normal
 	hi default PanelERRORBorder guifg=#8A1F1F
 	hi default PanelWARNBorder guifg=#79491D
-	hi default PanelINFOBorder guifg=#736405
+	hi default PanelINFOBorder guifg=#076678
 	hi default PanelDEBUGBorder guifg=#8B8B8B
 	hi default PanelTRACEBorder guifg=#4F3552
 	hi default PanelERRORIcon guifg=#F70067
 	hi default PanelWARNIcon guifg=#F79000
-	hi default PanelINFOIcon guifg=#076678
+	hi default PanelINFOIcon guifg=#28607c
 	hi default PanelDEBUGIcon guifg=#8B8B8B
 	hi default PanelTRACEIcon guifg=#D484FF
 	hi default PanelERRORTitle  guifg=#F70067
