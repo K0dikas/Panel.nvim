@@ -12,7 +12,7 @@ return function(bufnr, notif, highlights, config)
 	+ vim.str_utfindex(right_title)
 	+ vim.str_utfindex(left_title)
 
-	local left_buffer = string.rep(" ", math.max(0, max_message_width - title_accum))
+	local left_buffer = string.rep(" ", math.max(5, max_message_width - title_accum))
 
 	local namespace = base.namespace()
 	api.nvim_buf_set_lines(bufnr, 0, 1, true, { "", "" })
