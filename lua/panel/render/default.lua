@@ -32,7 +32,7 @@ return function(bufnr, notif, highlights, config)
 		priority = 10,
 	})
 	api.nvim_buf_set_extmark(bufnr, namespace, 1, 0, {
-		api.nvim_buf_set_option(bufnr, "modifiable", false);
+		api.nvim_buf_set_option(bufnr, "modifiable", true);
 		virt_text = {
 			{
 				string.rep(
