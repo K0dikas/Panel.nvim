@@ -2,7 +2,7 @@ local api = vim.api
 local base = require("panel.render.base")
 
 return function(bufnr, notif, highlights, config)
-	local left_icon = notif.icon .. " "
+	local left_icon = notif.icon .. " panel.nvim "
 	local max_message_width = math.max(math.max(unpack(vim.tbl_map(function(line)
 		return vim.fn.strchars(line)
 	end, notif.message))))
@@ -15,7 +15,7 @@ return function(bufnr, notif, highlights, config)
 	local left_buffer = string.rep(" ", math.max(0, max_message_width - title_accum))
 
 	local namespace = base.namespace()
-	api.nvim_buf_set_lines(bufnr, 0, 1, true, { " panel.nvim ", "" })
+	api.nvim_buf_set_lines(bufnr, 0, 1, true, { "", "" })
 	api.nvim_buf_set_extmark(bufnr, namespace, 0, 0, {
 		virt_text = {
 			{ " " },
