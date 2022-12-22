@@ -18,7 +18,7 @@ return function(bufnr, notif, highlights, config)
 	api.nvim_buf_set_lines(bufnr, 0, 1, true, { "", "" })
 	api.nvim_buf_set_extmark(bufnr, namespace, 0, 0, {
 		virt_text = {
-			{ " " },
+			{ " panel.nvim " },
 			{ left_icon, highlights.icon },
 			{ left_title .. left_buffer, highlights.title },
 		},
@@ -27,8 +27,8 @@ return function(bufnr, notif, highlights, config)
 	})
 	api.nvim_buf_set_extmark(bufnr, namespace, 0, 0, {
 		api.nvim_buf_set_option(bufnr, "modifiable", false);
-		virt_text = { { " panel.nvim" }, { right_title, highlights.title }, { " " } },
-		virt_text_pos = "left_align",
+		virt_text = { { " " }, { right_title, highlights.title }, { " " } },
+		virt_text_pos = "right_align",
 		priority = 10,
 	})
 	api.nvim_buf_set_extmark(bufnr, namespace, 1, 0, {
