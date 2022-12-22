@@ -15,7 +15,7 @@ return function(bufnr, notif, highlights, config)
 	local left_buffer = string.rep(" ", math.max(0, max_message_width - title_accum))
 
 	local namespace = base.namespace()
-	api.nvim_buf_set_lines(bufnr, 0, 1, false, { "", "" })
+	api.nvim_buf_set_lines(bufnr, 0, 1, true, { "", "" })
 	api.nvim_buf_set_extmark(bufnr, namespace, 0, 0, {
 		virt_text = {
 			{ " " },
@@ -32,7 +32,7 @@ return function(bufnr, notif, highlights, config)
 		priority = 10,
 	})
 	api.nvim_buf_set_extmark(bufnr, namespace, 1, 0, {
-		api.nvim_buf_set_option(bufnr, "modifiable", true);
+		api.nvim_buf_set_option(bufnr, "modifiable", false);
 		virt_text = {
 			{
 				string.rep(
