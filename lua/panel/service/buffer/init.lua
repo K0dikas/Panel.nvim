@@ -25,7 +25,7 @@ function NotificationBuf:new(kwargs)
 		_buffer = kwargs.buffer,
 		_state = BufState.CLOSED,
 		_width = 0,
-		_height = 0,
+		_height = 50,
 	}
 	setmetatable(notif_buf, self)
 	self.__index = self
